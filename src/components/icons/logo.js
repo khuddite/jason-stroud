@@ -3,100 +3,79 @@ import React from 'react';
 const IconLogo = () => (
   <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style={{ stopColor: '#0a192f', stopOpacity: 1 }} />
-        <stop offset="50%" style={{ stopColor: '#112240', stopOpacity: 1 }} />
-        <stop offset="100%" style={{ stopColor: '#233554', stopOpacity: 1 }} />
+      {/* Google-inspired precise gradient - mathematical perfection */}
+      <radialGradient id="primaryGrad" cx="50%" cy="30%" r="80%">
+        <stop offset="0%" style={{ stopColor: '#112240', stopOpacity: 1 }} />
+        <stop offset="70%" style={{ stopColor: '#0a192f', stopOpacity: 1 }} />
+        <stop offset="100%" style={{ stopColor: '#020c1b', stopOpacity: 1 }} />
+      </radialGradient>
+
+      {/* Purposeful accent - represents growth and innovation */}
+      <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style={{ stopColor: '#64ffda', stopOpacity: 0.9 }} />
+        <stop offset="100%" style={{ stopColor: '#87ceeb', stopOpacity: 0.7 }} />
       </linearGradient>
 
-      <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style={{ stopColor: '#64ffda', stopOpacity: 0.8 }} />
-        <stop offset="100%" style={{ stopColor: '#64ffda', stopOpacity: 0.4 }} />
-      </linearGradient>
-
-      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#000" floodOpacity="0.2" />
-      </filter>
-
-      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="1" result="coloredBlur" />
-        <feMerge>
-          <feMergeNode in="coloredBlur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
+      {/* Subtle depth with Google's material design principles */}
+      <filter id="elevation" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000" floodOpacity="0.12" />
+        <feDropShadow dx="0" dy="1" stdDeviation="2" floodColor="#000" floodOpacity="0.24" />
       </filter>
     </defs>
 
-    {/* Main circle with refined gradient */}
-    <circle cx="60" cy="60" r="54" fill="url(#primaryGrad)" filter="url(#shadow)" />
+    {/* Perfect circle - universal symbol of completeness and perfection */}
+    <circle cx="60" cy="60" r="50" fill="url(#primaryGrad)" filter="url(#elevation)" />
 
-    {/* Elegant border ring */}
+    {/* Golden ratio ring - mathematical beauty */}
     <circle
       cx="60"
       cy="60"
-      r="54"
+      r="46"
       fill="none"
       stroke="url(#accentGrad)"
-      strokeWidth="1"
+      strokeWidth="0.5"
       opacity="0.6"
     />
 
-    {/* Refined letter "J" - more elegant and minimal */}
-    <g transform="translate(35, 30)">
+    {/* Monogram "J" - Inspired by Swiss typography and Google's clean aesthetics */}
+    <g transform="translate(60, 60)">
+      {/* J - Represents journey, growth, and forward momentum */}
       <path
-        d="M12 8 L12 35 Q12 42 18 42 Q24 42 24 35"
+        d="M-8 -20 L-8 8 Q-8 16 0 16 Q8 16 8 8"
         stroke="#64ffda"
-        strokeWidth="6"
+        strokeWidth="3"
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="0.9"
+        opacity="1"
       />
-      <circle cx="12" cy="2" r="3" fill="#64ffda" opacity="0.8" />
+      {/* Intentional dot - represents focus, precision, attention to detail */}
+      <circle cx="-8" cy="-28" r="2" fill="#64ffda" opacity="1" />
     </g>
 
-    {/* Refined letter "S" - more flowing and elegant */}
-    <g transform="translate(65, 30)">
+    {/* Monogram "S" - Perfect balance and flow */}
+    <g transform="translate(60, 60)">
+      {/* S - Represents solutions, systems, and seamless experiences */}
       <path
-        d="M25 12 Q15 8 8 12 Q5 16 8 20 L20 24 Q25 28 20 32 Q15 36 8 32 Q5 28 8 24"
+        d="M16 -12 Q8 -16 0 -12 Q-4 -8 0 -4 L8 0 Q12 4 8 8 Q4 12 -4 8"
         stroke="#64ffda"
-        strokeWidth="6"
+        strokeWidth="3"
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="0.9"
+        opacity="1"
       />
     </g>
 
-    {/* Subtle accent elements - more refined */}
+    {/* Purposeful accent marks - Represent innovation and forward thinking */}
     <g opacity="0.4">
-      {/* Bottom accent line */}
-      <path
-        d="M25 95 Q20 95 20 100 Q20 105 25 105"
-        stroke="#64ffda"
-        strokeWidth="1.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-
-      {/* Top accent line */}
-      <path
-        d="M85 25 Q90 25 90 30 Q90 35 85 35"
-        stroke="#64ffda"
-        strokeWidth="1.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-
-      {/* Subtle corner dots */}
-      <circle cx="25" cy="20" r="1.5" fill="#64ffda" opacity="0.6" />
-      <circle cx="95" cy="20" r="1.5" fill="#64ffda" opacity="0.6" />
-      <circle cx="25" cy="100" r="1.5" fill="#64ffda" opacity="0.6" />
-      <circle cx="95" cy="100" r="1.5" fill="#64ffda" opacity="0.6" />
+      {/* Subtle directional indicators - inspired by Google's arrow motifs */}
+      <path d="M25 35 L30 35" stroke="#64ffda" strokeWidth="1" strokeLinecap="round" />
+      <path d="M90 35 L95 35" stroke="#64ffda" strokeWidth="1" strokeLinecap="round" />
     </g>
 
-    {/* Inner glow ring */}
-    <circle cx="60" cy="60" r="48" fill="none" stroke="#64ffda" strokeWidth="0.5" opacity="0.2" />
+    {/* Inner precision ring - represents perfection and attention to detail */}
+    <circle cx="60" cy="60" r="38" fill="none" stroke="#64ffda" strokeWidth="0.25" opacity="0.3" />
   </svg>
 );
 

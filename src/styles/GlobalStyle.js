@@ -235,34 +235,68 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    color: var(--lightest-slate);
+    background: linear-gradient(135deg, var(--lightest-slate) 0%, var(--green) 50%, var(--light-slate) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     line-height: 1.1;
     transition: var(--transition);
 
     &:hover {
-      color: var(--green);
+      background: linear-gradient(135deg, var(--green) 0%, var(--lightest-slate) 50%, var(--green) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Override for specific elements that should not have gradients */
+    &.project-title,
+    &.company {
+      background: none;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+      color: var(--lightest-slate);
+      
+      &:hover {
+        background: none;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        color: var(--green);
+      }
     }
   }
 
   .big-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 80px);
-    color: var(--lightest-slate);
+    background: linear-gradient(135deg, var(--lightest-slate) 0%, var(--green) 50%, var(--light-slate) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: var(--transition);
 
     &:hover {
-      color: var(--green);
+      background: linear-gradient(135deg, var(--green) 0%, var(--lightest-slate) 50%, var(--green) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
   .medium-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 60px);
-    color: var(--lightest-slate);
+    background: linear-gradient(135deg, var(--lightest-slate) 0%, var(--green) 50%, var(--light-slate) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: var(--transition);
 
     &:hover {
-      color: var(--green);
+      background: linear-gradient(135deg, var(--green) 0%, var(--lightest-slate) 50%, var(--green) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -274,6 +308,18 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     font-size: clamp(26px, 5vw, var(--fz-heading));
     white-space: nowrap;
+    background: linear-gradient(135deg, var(--lightest-slate) 0%, var(--green) 50%, var(--light-slate) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: var(--transition);
+
+    &:hover {
+      background: linear-gradient(135deg, var(--green) 0%, var(--lightest-slate) 50%, var(--green) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     &:before {
       position: relative;
@@ -320,6 +366,12 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     max-width: 100%;
     vertical-align: middle;
+    transition: var(--transition);
+    
+    &:hover {
+      transform: scale(1.02);
+      filter: drop-shadow(0 8px 16px rgba(100, 255, 218, 0.2));
+    }
   }
 
   img[alt=""],
@@ -349,6 +401,8 @@ const GlobalStyle = createGlobalStyle`
     &:hover,
     &:focus {
       color: var(--green);
+      transform: translateY(-2px);
+      filter: drop-shadow(0 4px 8px rgba(100, 255, 218, 0.2));
     }
 
     &.inline-link {
@@ -360,6 +414,17 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: 0;
     border-radius: 0;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      transform: translateY(-2px);
+      filter: drop-shadow(0 4px 12px rgba(100, 255, 218, 0.3));
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
   }
 
   input, textarea {
@@ -409,11 +474,23 @@ const GlobalStyle = createGlobalStyle`
         position: relative;
         padding-left: 30px;
         margin-bottom: 10px;
+        transition: var(--transition);
+        
+        &:hover {
+          transform: translateX(5px);
+        }
+        
         &:before {
           content: '▹';
           position: absolute;
           left: 0;
           color: var(--green);
+          transition: var(--transition);
+        }
+        
+        &:hover:before {
+          transform: scale(1.2);
+          filter: drop-shadow(0 0 8px var(--green));
         }
       }
     }
@@ -446,6 +523,11 @@ const GlobalStyle = createGlobalStyle`
   code {
     font-family: var(--font-mono);
     font-size: var(--fz-md);
+    transition: var(--transition);
+    
+    &:hover {
+      filter: drop-shadow(0 0 4px rgba(100, 255, 218, 0.3));
+    }
   }
 
   .skip-to-content {
@@ -478,14 +560,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .overline {
-    color: var(--green);
+    background: linear-gradient(135deg, var(--green) 0%, var(--lightest-slate) 50%, var(--green) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: var(--font-mono);
     font-size: var(--fz-md);
     font-weight: 400;
   }
 
   .subtitle {
-    color: var(--green);
+    background: linear-gradient(135deg, var(--green) 0%, var(--lightest-slate) 50%, var(--green) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin: 0 0 20px 0;
     font-size: var(--fz-md);
     font-family: var(--font-mono);

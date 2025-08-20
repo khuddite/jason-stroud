@@ -123,9 +123,16 @@ const StyledProject = styled.li`
     margin: 0 0 10px;
     color: var(--lightest-slate);
     font-size: var(--fz-xxl);
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
 
     a {
       position: static;
+      color: inherit;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
 
       &:before {
         content: '';
@@ -137,6 +144,20 @@ const StyledProject = styled.li`
         top: 0;
         left: 0;
       }
+
+      &:hover {
+        color: var(--green);
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: unset !important;
+      }
+    }
+
+    &:hover {
+      color: var(--green);
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
     }
   }
 

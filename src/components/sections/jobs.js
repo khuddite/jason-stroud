@@ -79,6 +79,9 @@ const StyledTabButton = styled.button`
   text-align: left;
   white-space: nowrap;
   transition: var(--transition);
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
 
   @media (max-width: 768px) {
     padding: 0 15px 2px;
@@ -102,6 +105,9 @@ const StyledTabButton = styled.button`
   &:focus {
     background-color: rgba(100, 255, 218, 0.05);
     color: var(--green);
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
   }
 `;
 
@@ -151,9 +157,30 @@ const StyledTabPanel = styled.div`
     font-size: var(--fz-xxl);
     font-weight: 500;
     line-height: 1.3;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    color: var(--lightest-slate);
 
     .company {
       color: var(--green);
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+    }
+
+    a {
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      color: var(--green);
+
+      &:hover {
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: unset !important;
+        color: var(--lightest-slate);
+      }
     }
   }
 
