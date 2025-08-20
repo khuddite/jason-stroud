@@ -48,11 +48,13 @@ const StyledText = styled.div`
 `;
 const StyledPic = styled.div`
   position: relative;
-  max-width: 300px;
+  width: 300px;
+  height: 300px;
 
   @media (max-width: 768px) {
     margin: 50px auto 0;
-    width: 70%;
+    width: 250px;
+    height: 250px;
   }
 
   .wrapper {
@@ -60,56 +62,76 @@ const StyledPic = styled.div`
     display: block;
     position: relative;
     width: 100%;
-    border-radius: var(--border-radius);
-    background-color: var(--green);
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+    padding: 6px;
+    transition: var(--transition);
+    border: 2px solid var(--green);
+    background: transparent;
 
     &:hover,
     &:focus {
       outline: 0;
-      transform: translate(-4px, -4px);
-
-      &:after {
-        transform: translate(8px, 8px);
-      }
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(100, 255, 218, 0.1);
 
       .img {
-        filter: none;
+        filter: grayscale(60%) contrast(1.05);
         mix-blend-mode: normal;
+      }
+
+      &:before {
+        opacity: 0.3;
+        transform: scale(1.02);
       }
     }
 
     .img {
       position: relative;
-      border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
-
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
       width: 100%;
       height: 100%;
-      border-radius: var(--border-radius);
+      border-radius: 50%;
+      mix-blend-mode: multiply;
+      filter: grayscale(80%) contrast(1.1);
       transition: var(--transition);
+      z-index: 2;
+      object-fit: cover;
     }
 
     &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
-    }
-
-    &:after {
-      border: 2px solid var(--green);
-      top: 14px;
-      left: 14px;
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: var(--green);
+      border-radius: 50%;
       z-index: -1;
+      opacity: 0.1;
+      transition: var(--transition);
+      filter: blur(15px);
     }
+  }
+
+  /* Subtle accent line */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background: var(--green);
+    opacity: 0.4;
+    transition: var(--transition);
+  }
+
+  &:hover::after {
+    width: 40px;
+    opacity: 0.6;
   }
 `;
 
@@ -125,7 +147,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['TypeScript', 'Python', 'React', 'React Native', 'Node.js', 'Ruby on Rails'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,33 +157,20 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Jason, and I enjoy creating web and mobile applications that bring
+              ideas to life on the internet. My journey in development began over a decade ago,
+              fuelled by curiosity and a drive to understand how technology shapes the way we
+              connect. Since then, I've worked across startups, open-source projects, and
+              large-scale applications—always prioritising quality, scalability, and accessibility.
+              I'm passionate about contributing to developer communities, constantly sharpening my
+              skills, and building polished, reliable products through teamwork and collaboration.
+              <br />
+              <br />
+              Outside of coding, I refresh my mind through sports and stay curious about the
+              evolving world of technology.
             </p>
 
-            <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
-            </p>
-
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
-            </p>
-
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I've been working with recently:</p>
           </div>
 
           <ul className="skills-list">
@@ -173,7 +182,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/me.png"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}

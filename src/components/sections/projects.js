@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import React, { useEffect, useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { srConfig } from '@config';
@@ -74,6 +74,11 @@ const StyledProject = styled.li`
     background-color: var(--light-navy);
     transition: var(--transition);
     overflow: auto;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: rgba(100, 255, 218, 0.1);
+    }
   }
 
   .project-top {
@@ -138,6 +143,7 @@ const StyledProject = styled.li`
   .project-description {
     color: var(--light-slate);
     font-size: 17px;
+    line-height: 1.6;
 
     a {
       ${({ theme }) => theme.mixins.inlineLink};
@@ -190,7 +196,6 @@ const Projects = () => {
     }
   `);
 
-  const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
@@ -209,7 +214,7 @@ const Projects = () => {
   const GRID_LIMIT = 6;
   const projects = data.projects.edges.filter(({ node }) => node);
   const firstSix = projects.slice(0, GRID_LIMIT);
-  const projectsToShow = showMore ? projects : firstSix;
+  const projectsToShow = firstSix;
 
   const projectInner = node => {
     const { frontmatter, html } = node;
@@ -265,11 +270,7 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
-
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
-      </Link>
+      <h2 ref={revealTitle}>Open Source Contributions</h2>
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (
@@ -301,10 +302,6 @@ const Projects = () => {
           </TransitionGroup>
         )}
       </ul>
-
-      <button className="more-button" onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? 'Less' : 'More'}
-      </button>
     </StyledProjectsSection>
   );
 };

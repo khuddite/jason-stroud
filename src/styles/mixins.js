@@ -11,12 +11,15 @@ const button = css`
   text-decoration: none;
   padding: 1.25rem 1.75rem;
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 
   &:hover,
   &:focus-visible {
     outline: none;
-    box-shadow: 4px 4px 0 0 var(--green);
-    transform: translate(-5px, -5px);
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
   }
   &:after {
     display: none !important;
@@ -97,12 +100,15 @@ const mixins = {
     line-height: 1;
     text-decoration: none;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 
     &:hover,
     &:focus-visible {
       outline: none;
-      box-shadow: 3px 3px 0 0 var(--green);
-      transform: translate(-4px, -4px);
+      background-color: rgba(100, 255, 218, 0.1);
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
     }
     &:after {
       display: none !important;
@@ -120,12 +126,15 @@ const mixins = {
     line-height: 1;
     text-decoration: none;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 
     &:hover,
     &:focus-visible {
       outline: none;
-      box-shadow: 4px 4px 0 0 var(--green);
-      transform: translate(-5px, -5px);
+      background-color: rgba(100, 255, 218, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
     }
     &:after {
       display: none !important;
@@ -133,12 +142,13 @@ const mixins = {
   `,
 
   boxShadow: css`
-    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    box-shadow: 0 4px 20px rgba(2, 12, 27, 0.15);
     transition: var(--transition);
 
     &:hover,
     &:focus-visible {
-      box-shadow: 0 20px 30px -15px var(--navy-shadow);
+      box-shadow: 0 8px 30px rgba(2, 12, 27, 0.25);
+      transform: translateY(-2px);
     }
   `,
 

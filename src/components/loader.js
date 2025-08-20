@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 import styled from 'styled-components';
-import { IconLoader } from '@components/icons';
+import { IconLogo } from '@components/icons';
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -46,22 +46,17 @@ const Loader = ({ finishLoading }) => {
 
     loader
       .add({
-        targets: '#logo path',
+        targets: '.logo-wrapper svg',
         delay: 300,
-        duration: 1500,
+        duration: 1000,
         easing: 'easeInOutQuart',
-        strokeDashoffset: [anime.setDashoffset, 0],
+        opacity: [0, 1],
+        scale: [0.8, 1],
       })
       .add({
-        targets: '#logo #B',
-        duration: 700,
-        easing: 'easeInOutQuart',
-        opacity: 1,
-      })
-      .add({
-        targets: '#logo',
-        delay: 500,
-        duration: 300,
+        targets: '.logo-wrapper svg',
+        delay: 800,
+        duration: 500,
         easing: 'easeInOutQuart',
         opacity: 0,
         scale: 0.1,
@@ -86,7 +81,7 @@ const Loader = ({ finishLoading }) => {
       <Helmet bodyAttributes={{ class: `hidden` }} />
 
       <div className="logo-wrapper">
-        <IconLoader />
+        <IconLogo />
       </div>
     </StyledLoader>
   );

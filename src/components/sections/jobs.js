@@ -35,32 +35,30 @@ const StyledTabList = styled.div`
   @media (max-width: 600px) {
     display: flex;
     overflow-x: auto;
-    width: calc(100% + 100px);
-    padding-left: 50px;
-    margin-left: -50px;
-    margin-bottom: 30px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 0 30px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   @media (max-width: 480px) {
-    width: calc(100% + 50px);
-    padding-left: 25px;
-    margin-left: -25px;
+    padding: 0 15px;
   }
 
   li {
     &:first-of-type {
       @media (max-width: 600px) {
-        margin-left: 50px;
-      }
-      @media (max-width: 480px) {
-        margin-left: 25px;
+        margin-left: 0;
       }
     }
     &:last-of-type {
       @media (max-width: 600px) {
-        padding-right: 50px;
-      }
-      @media (max-width: 480px) {
-        padding-right: 25px;
+        padding-right: 0;
       }
     }
   }
@@ -80,6 +78,7 @@ const StyledTabButton = styled.button`
   font-size: var(--fz-xs);
   text-align: left;
   white-space: nowrap;
+  transition: var(--transition);
 
   @media (max-width: 768px) {
     padding: 0 15px 2px;
@@ -91,11 +90,18 @@ const StyledTabButton = styled.button`
     border-left: 0;
     border-bottom: 2px solid var(--lightest-navy);
     text-align: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &:hover,
   &:focus {
-    background-color: var(--light-navy);
+    background-color: rgba(100, 255, 218, 0.05);
+    color: var(--green);
   }
 `;
 
@@ -113,16 +119,7 @@ const StyledHighlight = styled.div`
   transition-delay: 0.1s;
 
   @media (max-width: 600px) {
-    top: auto;
-    bottom: 0;
-    width: 100%;
-    max-width: var(--tab-width);
-    height: 2px;
-    margin-left: 50px;
-    transform: translateX(calc(${({ activeTabId }) => activeTabId} * var(--tab-width)));
-  }
-  @media (max-width: 480px) {
-    margin-left: 25px;
+    display: none;
   }
 `;
 
@@ -133,6 +130,10 @@ const StyledTabPanels = styled.div`
 
   @media (max-width: 600px) {
     margin-left: 0;
+    padding: 0 20px;
+  }
+  @media (max-width: 480px) {
+    padding: 0 15px;
   }
 `;
 
@@ -169,14 +170,13 @@ const Jobs = () => {
     query {
       jobs: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/jobs/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { fields: [frontmatter___date], order: ASC }
       ) {
         edges {
           node {
             frontmatter {
               title
               company
-              location
               range
               url
             }

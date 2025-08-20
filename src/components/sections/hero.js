@@ -18,26 +18,30 @@ const StyledHeroSection = styled.section`
   }
 
   h1 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 20px 4px;
     color: var(--green);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
+    letter-spacing: 0.1em;
 
     @media (max-width: 480px) {
-      margin: 0 0 20px 2px;
+      margin: 0 0 15px 2px;
     }
   }
 
   h3 {
-    margin-top: 5px;
+    margin-top: 10px;
     color: var(--slate);
-    line-height: 0.9;
+    line-height: 1.1;
+    font-weight: 400;
   }
 
   p {
-    margin: 20px 0 0;
+    margin: 25px 0 0;
     max-width: 540px;
+    line-height: 1.6;
+    color: var(--light-slate);
   }
 
   .email-link {
@@ -60,18 +64,15 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const two = <h2 className="big-heading">Jason Stroud.</h2>;
+  const three = <h3 className="big-heading">Code. Community. Craft. Care.</h3>;
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
+        I’m a software engineer who builds web and mobile experiences with a focus on quality,
+        accessibility, and thoughtful design. Having played sports my whole life, I bring lessons in
+        focus, teamwork, discipline, and hard work into every project I tackle. I also enjoy
+        contributing to open-source and learning from the developer community.
       </p>
     </>
   );

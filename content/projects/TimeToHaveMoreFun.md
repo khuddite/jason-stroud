@@ -1,14 +1,15 @@
 ---
 date: '2020-01-10'
-title: 'Time to Have More Fun'
-github: 'https://github.com/bchiang7/time-to-have-more-fun'
-external: 'https://time-to-have-more-fun.now.sh/'
+title: 'Twenty CRM'
+github: 'https://github.com/twentyhq/twenty/commits/main/?author=khuddite'
+external: 'https://website-on-framer.twenty.com/'
 tech:
   - Next.js
   - Tailwind CSS
-  - Firebase
+  - Nest.js
+  - PostgreSQL
 company: ''
 showInProjects: true
 ---
 
-A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS
+A CRM platform for managing sales and customer relationships, built with React, TypeScript, and PostgreSQL.

@@ -1,13 +1,13 @@
 ---
 date: '2019-11-12'
-title: 'Building a Headless Mobile App CMS From Scratch'
-github: ''
-external: 'https://medium.com/stories-from-upstatement/building-a-headless-mobile-app-cms-from-scratch-bab2d17744d9'
+title: 'Signal Desktop'
+github: 'https://github.com/signalapp/Signal-Desktop/releases/tag/v7.33.0-beta.1'
+external: 'https://signal.org/'
 tech:
-  - Node
-  - Express
-  - Firebase
-  - Vue
+  - React
+  - Electron
+  - React Aria
+  - Storybook
 company: 'Upstatement'
 showInProjects: true
 ---

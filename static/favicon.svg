@@ -1,0 +1,51 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a192f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#112240;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#233554;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main circle with refined gradient -->
+  <circle cx="16" cy="16" r="15" fill="url(#primaryGrad)" />
+
+  <!-- Elegant border ring -->
+  <circle cx="16" cy="16" r="15" fill="none" stroke="#64ffda" stroke-width="0.5" opacity="0.6" />
+
+  <!-- Refined letter "J" - more elegant and minimal -->
+  <g transform="translate(9, 8)">
+    <path
+      d="M3 2 L3 9 Q3 11 5 11 Q7 11 7 9"
+      stroke="#64ffda"
+      stroke-width="1.5"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.9"
+    />
+    <circle cx="3" cy="0.5" r="0.8" fill="#64ffda" opacity="0.8" />
+  </g>
+
+  <!-- Refined letter "S" - more flowing and elegant -->
+  <g transform="translate(17, 8)">
+    <path
+      d="M7 3 Q4 2 2 3 Q1 4 2 5 L5 6 Q7 7 5 8 Q4 9 2 8 Q1 7 2 6"
+      stroke="#64ffda"
+      stroke-width="1.5"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.9"
+    />
+  </g>
+
+  <!-- Subtle corner dots -->
+  <circle cx="7" cy="5" r="0.4" fill="#64ffda" opacity="0.6" />
+  <circle cx="25" cy="5" r="0.4" fill="#64ffda" opacity="0.6" />
+  <circle cx="7" cy="27" r="0.4" fill="#64ffda" opacity="0.6" />
+  <circle cx="25" cy="27" r="0.4" fill="#64ffda" opacity="0.6" />
+
+  <!-- Inner glow ring -->
+  <circle cx="16" cy="16" r="13" fill="none" stroke="#64ffda" stroke-width="0.2" opacity="0.2" />
+</svg>

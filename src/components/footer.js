@@ -9,8 +9,9 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   height: auto;
   min-height: 70px;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+  border-top: 1px solid var(--lightest-navy);
 `;
 
 const StyledSocialLinks = styled.div`
@@ -105,22 +106,20 @@ const Footer = () => {
       </StyledSocialLinks>
 
       <StyledCredit tabindex="-1">
-        <a href="https://github.com/bchiang7/v4">
-          <div>Designed &amp; Built by Brittany Chiang</div>
+        <div>Designed &amp; Built by Jason Stroud</div>
 
-          {githubInfo.stars && githubInfo.forks && (
-            <div className="github-stats">
-              <span>
-                <Icon name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
-              </span>
-              <span>
-                <Icon name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
-              </span>
-            </div>
-          )}
-        </a>
+        {githubInfo.stars && githubInfo.forks && (
+          <div className="github-stats">
+            <span>
+              <Icon name="Star" />
+              <span>{githubInfo.stars.toLocaleString()}</span>
+            </span>
+            <span>
+              <Icon name="Fork" />
+              <span>{githubInfo.forks.toLocaleString()}</span>
+            </span>
+          </div>
+        )}
       </StyledCredit>
     </StyledFooter>
   );

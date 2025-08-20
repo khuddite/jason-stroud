@@ -1,24 +1,102 @@
 import React from 'react';
 
 const IconLogo = () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 84 96">
-    <title>Logo</title>
-    <g transform="translate(-8.000000, -2.000000)">
-      <g transform="translate(11.000000, 5.000000)">
-        <polygon
-          id="Shape"
-          stroke="currentColor"
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          points="39 0 0 22 0 67 39 90 78 68 78 23"
-        />
-        <path
-          d="M45.691667,45.15 C48.591667,46.1 50.691667,48.95 50.691667,52.2 C50.691667,57.95 46.691667,61 40.291667,61 L28.541667,61 L28.541667,30.3 L39.291667,30.3 C45.691667,30.3 49.691667,33.15 49.691667,38.65 C49.691667,41.95 47.941667,44.35 45.691667,45.15 Z M33.591667,43.2 L39.241667,43.2 C42.791667,43.2 44.691667,41.85 44.691667,38.95 C44.691667,36.05 42.791667,34.8 39.241667,34.8 L33.591667,34.8 L33.591667,43.2 Z M33.591667,47.5 L33.591667,56.5 L40.191667,56.5 C43.691667,56.5 45.591667,54.75 45.591667,52 C45.591667,49.2 43.691667,47.5 40.191667,47.5 L33.591667,47.5 Z"
-          fill="currentColor"
-        />
-      </g>
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{ stopColor: '#0a192f', stopOpacity: 1 }} />
+        <stop offset="50%" style={{ stopColor: '#112240', stopOpacity: 1 }} />
+        <stop offset="100%" style={{ stopColor: '#233554', stopOpacity: 1 }} />
+      </linearGradient>
+
+      <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{ stopColor: '#64ffda', stopOpacity: 0.8 }} />
+        <stop offset="100%" style={{ stopColor: '#64ffda', stopOpacity: 0.4 }} />
+      </linearGradient>
+
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#000" floodOpacity="0.2" />
+      </filter>
+
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="1" result="coloredBlur" />
+        <feMerge>
+          <feMergeNode in="coloredBlur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+
+    {/* Main circle with refined gradient */}
+    <circle cx="60" cy="60" r="54" fill="url(#primaryGrad)" filter="url(#shadow)" />
+
+    {/* Elegant border ring */}
+    <circle
+      cx="60"
+      cy="60"
+      r="54"
+      fill="none"
+      stroke="url(#accentGrad)"
+      strokeWidth="1"
+      opacity="0.6"
+    />
+
+    {/* Refined letter "J" - more elegant and minimal */}
+    <g transform="translate(35, 30)">
+      <path
+        d="M12 8 L12 35 Q12 42 18 42 Q24 42 24 35"
+        stroke="#64ffda"
+        strokeWidth="6"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.9"
+      />
+      <circle cx="12" cy="2" r="3" fill="#64ffda" opacity="0.8" />
     </g>
+
+    {/* Refined letter "S" - more flowing and elegant */}
+    <g transform="translate(65, 30)">
+      <path
+        d="M25 12 Q15 8 8 12 Q5 16 8 20 L20 24 Q25 28 20 32 Q15 36 8 32 Q5 28 8 24"
+        stroke="#64ffda"
+        strokeWidth="6"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.9"
+      />
+    </g>
+
+    {/* Subtle accent elements - more refined */}
+    <g opacity="0.4">
+      {/* Bottom accent line */}
+      <path
+        d="M25 95 Q20 95 20 100 Q20 105 25 105"
+        stroke="#64ffda"
+        strokeWidth="1.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* Top accent line */}
+      <path
+        d="M85 25 Q90 25 90 30 Q90 35 85 35"
+        stroke="#64ffda"
+        strokeWidth="1.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* Subtle corner dots */}
+      <circle cx="25" cy="20" r="1.5" fill="#64ffda" opacity="0.6" />
+      <circle cx="95" cy="20" r="1.5" fill="#64ffda" opacity="0.6" />
+      <circle cx="25" cy="100" r="1.5" fill="#64ffda" opacity="0.6" />
+      <circle cx="95" cy="100" r="1.5" fill="#64ffda" opacity="0.6" />
+    </g>
+
+    {/* Inner glow ring */}
+    <circle cx="60" cy="60" r="48" fill="none" stroke="#64ffda" strokeWidth="0.5" opacity="0.2" />
   </svg>
 );
 
