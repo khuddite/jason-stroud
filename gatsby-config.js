@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Jason Stroud',
     description:
-      'Jason Stroud is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+      'Jason Stroud is a software engineer passionate about building digital products that combine clean engineering, elegant design, and real-world impact.',
     siteUrl: 'https://jason-stroud.vercel.app', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@khuddite',
