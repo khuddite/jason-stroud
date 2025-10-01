@@ -1,7 +1,7 @@
 ---
 date: '2020-03-27'
 title: 'Bluesky Social'
-external: 'https://bluesky.com'
+external: 'https://bsky.app'
 github: 'https://github.com/bluesky-social/social-app/commits/main/?author=khuddite'
 tech:
   - Typescript
