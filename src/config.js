@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/jason-stroud-bab943375',
+      url: 'https://www.linkedin.com/in/jason-stroud-587743395',
     },
     {
       name: 'Telegram',
