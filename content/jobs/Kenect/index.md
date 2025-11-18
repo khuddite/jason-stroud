@@ -6,7 +6,8 @@ range: 'Dec 2022 - Oct 2023'
 url: 'https://kenect.com/'
 ---
 
-- Built features such as content library management, social media publishing, and Sunbit payment integration using React, React Router, Tanstack Query, React Hook Form and Yup.
-- Implemented Detox testing for mobile and introduced automation to reduce release bugs.
-- Led the move from JavaScript to TypeScript, conducting code audits and helping teams adopt the new setup.
-- Participated in internal tooling projects, including Slack integrations and coding standards.
+- Worked on both Kenect web/mobile platforms and built key features such as Content Library Management, Pay Over Time, Multi-factor authentication, and Payment Analytics Dashboard using React, React Native, Typescript, HighCharts, Redux, Yup, and Lodash.
+- Took the initiative and led the Typescript migration from JavaScript to decrease the number of bugs and improve the overall software quality drastically.
+- Participated in regular front-end syncups to streamline workflows, discuss latest technologies, tech debts, and establish the coding standards that could help with PR reviews and ensure consistency.
+- Regularly jumped into pairing sessions with fellow engineers to review PRs, tackle complex technical challenges together, and share knowledge.
+- Collaborated with cross-functional teams and product/design teams to stay aligned on feature priorities and ticket specifications.

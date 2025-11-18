@@ -6,6 +6,7 @@ range: 'May 2015 - Oct 2018'
 url: 'https://www.capstone-is.com/'
 ---
 
-- Contributed to Point of Sale systems focused on responsive UI and solid user workflows.
-- Built frontend components with JavaScript and React, and worked closely with senior developers to implement key features.
-- Participated in cross-browser testing and debugging to ensure reliability in different environments.
+- Contributed to the development and maintenance of Aptos Store Selling App (mobile point-of-sale system) and backoffice app using React, React Native, Typescript, Redux, Redux-Saga, and React Native Camera.
+- Actively audited and identified the bottlenecks in both code and workflow, and addressed them to improve the software performance and minimize the engineering overhead.
+- Participated in PR reviews and provided helpful insights and suggestions that could simplify and optimize the code.
+- Worked closely with the scrum master to clarify the ticket requirements and QA engineers to ensure the quality of the software.

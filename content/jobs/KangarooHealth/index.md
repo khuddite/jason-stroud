@@ -6,6 +6,7 @@ range: 'Oct 2018 - Dec 2022'
 url: 'https://kangaroohealth.com/'
 ---
 
-- Built provider-facing tools such as task management, call queues, and realtime notifications using Next.js, MUI and Twilio.
-- Helped define backend API contracts by working closely with backend engineers during planning and implementation.
-- Led the transition from CRA + Webpack to Next.js + Vite, improving build performance and code organization.
+- Developed and maintained provider-facing web platform for RPM (remote patient monitoring) using React, Material UI, Twilio voice/video SDK, Redux, Formik, and Yup.
+- Worked closely with back-end engineers to discuss the development plan for each product feature and stay aligned on what's expected from each other.
+- Stayed on top of Jira and Bitbucket (task/source code management) for speedy iteration of feedback and feature delivery.
+- Integrated unit testing using Jest/React Testing Library and automated testing using Cypress to catch bugs as early as the development process and hold the high standards for software quality.

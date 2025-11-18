@@ -6,7 +6,7 @@ range: 'Nov 2023 - Apr 2024'
 url: 'https://exchange.adobe.com/apps/cc/103752/custom-metadata-panel-for-bridge'
 ---
 
-- Designed and built the third version of Adobe Bridge’s metadata panel (CMP3), focusing on maintainability and flexibility.
-- Worked with React, React Spectrum, UXP, CEP, Tailwind CSS and TypeScript to deliver a consistent UI across different Adobe platforms.
-- Coordinated regularly with the team to keep development on track and unblock implementation issues.
-- Prototyped and integrated GenAI and Firefly features into internal tools to explore Adobe’s AI capabilities.
+- Architected and developed CMP3 (custom metadata panel) for Adobe Bridge using React, CEP, React Spectrum, React Aria, Tailwind CSS, React Hook Form, and Zod from the ground up.
+- Worked closely with the leadership and organized recurring demo meetings to manage expectations, iterate feedback, and stay aligned throughout the entire development.
+- Actively collaborated with the designers and co-engineers to discuss different ways of building things and exchange feedback/suggestions, acknowledging that teams produce better results than individuals.
+- Participated in hackathons and built several POC CEP/UXP panels, experimenting with Adobe's FireFly GenAI model to stay up-to-date and connected with AI evolution.
