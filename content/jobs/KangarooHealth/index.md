@@ -2,7 +2,7 @@
 date: '4'
 title: 'Senor Software Engineer'
 company: 'KangarooHealth'
-range: 'July - December 2016'
+range: 'Oct 2018 - Dec 2022'
 url: 'https://kangaroohealth.com/'
 ---
 

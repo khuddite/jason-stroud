@@ -2,7 +2,7 @@
 date: '6'
 title: 'Software Engineer'
 company: 'Capstone Integrated Solutions'
-range: 'May 2015 - Feb 2017'
+range: 'May 2015 - Oct 2018'
 url: 'https://www.capstone-is.com/'
 ---
 
