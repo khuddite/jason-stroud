@@ -11,7 +11,6 @@ const StyledFooter = styled.footer`
   min-height: 70px;
   padding: 20px;
   text-align: center;
-  border-top: 1px solid var(--lightest-navy);
 `;
 
 const StyledSocialLinks = styled.div`
@@ -73,13 +72,13 @@ const Footer = () => (
     <StyledSocialLinks>
       <ul>
         {socialMedia &&
-            socialMedia.map(({ name, url }, i) => (
-              <li key={i}>
-                <a href={url} aria-label={name}>
-                  <Icon name={name} />
-                </a>
-              </li>
-            ))}
+          socialMedia.map(({ name, url }, i) => (
+            <li key={i}>
+              <a href={url} aria-label={name}>
+                <Icon name={name} />
+              </a>
+            </li>
+          ))}
       </ul>
     </StyledSocialLinks>
 
