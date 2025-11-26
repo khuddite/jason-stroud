@@ -194,7 +194,9 @@ const Certificates = () => {
   const certificates = data.certificates.edges.filter(({ node }) => node);
 
   const renderCertificateImage = (image, name) => {
-    if (!image) {return null;}
+    if (!image) {
+      return null;
+    }
     return <img src={image} alt={`${name} Certificate`} />;
   };
 
@@ -225,7 +227,7 @@ const Certificates = () => {
   return (
     <StyledCertificatesSection id="certificates">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Certifications
+        Certificates
       </h2>
 
       <ul className="certificates-grid">
