@@ -16,6 +16,8 @@ import {
   IconStar,
   IconTelegram,
   IconTwitter,
+  IconHackerRank,
+  IconLeetCode,
 } from '@components/icons';
 
 const Icon = ({ name }) => {
@@ -50,6 +52,10 @@ const Icon = ({ name }) => {
       return <IconTelegram />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'HackerRank':
+      return <IconHackerRank />;
+    case 'LeetCode':
+      return <IconLeetCode />;
     default:
       return <IconExternal />;
   }

@@ -15,3 +15,5 @@ export { default as IconPlayStore } from './playstore';
 export { default as IconStar } from './star';
 export { default as IconTelegram } from './telegram';
 export { default as IconTwitter } from './twitter';
+export { default as IconHackerRank } from './hackerrank';
+export { default as IconLeetCode } from './leetcode';

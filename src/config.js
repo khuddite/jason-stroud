@@ -7,8 +7,12 @@ module.exports = {
       url: 'https://github.com/khuddite',
     },
     {
-      name: 'Twitter',
-      url: 'https://x.com/khuddite',
+      name: 'HackerRank',
+      url: 'https://hackerrank.com/jstroud0718',
+    },
+    {
+      name: 'LeetCode',
+      url: 'https://leetcode.com/khuddite/',
     },
     {
       name: 'Linkedin',
