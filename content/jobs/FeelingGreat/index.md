@@ -1,6 +1,6 @@
 ---
 date: '1'
-title: 'Principal Software Engineer'
+title: 'Senior Front-end Engineer'
 company: 'FeelingGreat'
 range: 'Apr 2024 - Present'
 url: 'https://www.feelinggreat.com/'

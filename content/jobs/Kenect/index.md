@@ -1,6 +1,6 @@
 ---
 date: '3'
-title: 'Senior Software Engineer'
+title: 'Senior Front-end Engineer'
 company: 'Kenect'
 range: 'Dec 2022 - Oct 2023'
 url: 'https://kenect.com/'

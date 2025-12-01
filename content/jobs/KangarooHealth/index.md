@@ -1,6 +1,6 @@
 ---
 date: '4'
-title: 'Senor Software Engineer'
+title: 'Senior Front-end Engineer'
 company: 'KangarooHealth'
 range: 'Oct 2018 - Dec 2022'
 url: 'https://kangaroohealth.com/'

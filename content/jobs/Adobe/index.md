@@ -1,6 +1,6 @@
 ---
 date: '2'
-title: 'Software Architect'
+title: 'Senior Front-end Engineer'
 company: 'Adobe'
 range: 'Nov 2023 - Apr 2024'
 url: 'https://exchange.adobe.com/apps/cc/103752/custom-metadata-panel-for-bridge'
